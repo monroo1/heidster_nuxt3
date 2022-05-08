@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node .output/server/index.mjs"
+  },
+  "devDependencies": {
+    "nuxt3": "latest",
+    "sass": "^1.50.0",
+    "sass-loader": "10"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "swiper": "^8.1.1",
+    "vue-yandex-maps": "^0.11.9",
+    "vuex": "^4.0.2"
+  }
+}
