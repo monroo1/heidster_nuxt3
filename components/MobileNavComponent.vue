@@ -5,7 +5,11 @@
       <div v-for="link in links" :key="link.id" class="mobile-nav__item">
         <NuxtLink :to="link.route" class="mobile-nav__link">
           <div class="mobile-nav__link-logo">
-            <img :src="`/assets/img/icons/${link.src}.svg`" alt="img" class="mobile-nav__link-img">
+            <img
+              :src="require(`~/assets/img/icons/${link.src}.svg`)"
+              alt="img"
+              class="mobile-nav__link-img"
+            />
           </div>
           <div class="mobile-nav__link-text">
             {{ link.text }}
@@ -18,30 +22,30 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       links: [
-        { id: 1, text: 'Компания', route: '/', src: 'home' },
+        { id: 1, text: "Компания", route: "/", src: "home" },
         {
           id: 2,
-          text: 'Услуги',
-          route: '/services',
-          src: 'services'
+          text: "Услуги",
+          route: "/services",
+          src: "services",
         },
         {
           id: 3,
-          text: 'Проекты',
-          route: '/projects',
-          src: 'projects'
+          text: "Проекты",
+          route: "/projects",
+          src: "projects",
         },
         {
           id: 4,
-          text: 'Контакты',
-          route: '/contacts',
-          src: 'contacts'
-        }
-      ]
-    }
-  }
-}
+          text: "Контакты",
+          route: "/contacts",
+          src: "contacts",
+        },
+      ],
+    };
+  },
+};
 </script>
