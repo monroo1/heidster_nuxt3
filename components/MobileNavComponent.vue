@@ -4,11 +4,7 @@
       <div v-for="link in links" :key="link.id" class="mobile-nav__item">
         <NuxtLink :to="link.route" class="mobile-nav__link">
           <div class="mobile-nav__link-logo">
-            <img
-              :src="require(`~/assets/img/icons/${link.src}.svg`)"
-              alt="img"
-              class="mobile-nav__link-img"
-            />
+            <img :src="getImg(link)" alt="img" class="mobile-nav__link-img" />
           </div>
           <div class="mobile-nav__link-text">
             {{ link.text }}
@@ -45,6 +41,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    getImg(e) {
+      return `/assets/img/icons/${e.src}.svg`;
+    },
   },
 };
 </script>
