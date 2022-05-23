@@ -1,4 +1,3 @@
-<!--yes -->
 <template>
   <section class="mobile-nav">
     <div class="mobile-nav__container">
@@ -6,7 +5,7 @@
         <NuxtLink :to="link.route" class="mobile-nav__link">
           <div class="mobile-nav__link-logo">
             <img
-              :src="require(`~/assets/img/icons/${link.src}.svg`)"
+              :src="`/assets/img/icons/${link.src}.svg`"
               alt="img"
               class="mobile-nav__link-img"
             />
