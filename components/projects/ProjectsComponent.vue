@@ -26,7 +26,7 @@
           id="swiper-projects"
         >
           <SwiperSlide v-for="img in item.swipersImg" :key="img"
-            ><img :src="getImg(img)"
+            ><img :src="`/assets/img/${img}`"
           /></SwiperSlide>
         </Swiper>
         <UIApplicationBtn style="padding: 16px 0" />
@@ -55,11 +55,11 @@ export default {
           description:
             "Мы проводим глубокий анализ каждого проекта. Используем комплексный подход к проектированию прототипов и программной разработке, учитывающий особенности сферы деятельности вашего бизнеса.",
           swipersImg: [
-            "make-site/one",
-            "make-site/two",
-            "make-site/three",
-            "make-site/four",
-            "make-site/five",
+            "make-site/one.png",
+            "make-site/two.png",
+            "make-site/three.png",
+            "make-site/four.png",
+            "make-site/five.png",
           ],
         },
         {
@@ -67,10 +67,10 @@ export default {
           description:
             "Мы перерабатываем новое визуальное оформление вашего веб-сайта, навигацию и его содержимое для повышения его производительности и новых клиентов.",
           swipersImg: [
-            "redisign/one",
-            "redisign/two",
-            "redisign/three",
-            "redisign/four",
+            "redisign/one.png",
+            "redisign/two.png",
+            "redisign/three.png",
+            "redisign/four.png",
           ],
         },
         {
@@ -78,20 +78,15 @@ export default {
           description:
             "Мы разрабатываем уникальную концепцию бренда вашей компании от логотипа до корпоративного стиля. Разрабатываем индивидуальный дизайн визиток, готовим материал к передачи в типографию. Разрабатываем дизайн упаковки товара.",
           swipersImg: [
-            "brending/one",
-            "brending/two",
-            "brending/three",
-            "brending/four",
-            "brending/five",
+            "brending/one.png",
+            "brending/two.png",
+            "brending/three.png",
+            "brending/four.png",
+            "brending/five.png",
           ],
         },
       ],
     };
-  },
-  methods: {
-    getImg(e) {
-      return `../../assets/img/${e}.png`;
-    },
   },
 };
 </script>
