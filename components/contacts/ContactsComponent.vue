@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div>
     <section class="contacts">
       <h2 class="contacts__title">
         {{ title }}
@@ -35,7 +35,7 @@
       </div>
     </section>
     <section class="contacts-map"></section>
-  </main>
+  </div>
 </template>
 
 <script>

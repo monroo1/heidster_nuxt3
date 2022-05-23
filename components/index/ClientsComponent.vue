@@ -15,7 +15,7 @@
       id="clients-swiper"
     >
       <SwiperSlide v-for="img in slides" :key="img.id"
-        ><img :src="`/assets/img/clients/${img}.png`"
+        ><img :src="getImg(img)"
       /></SwiperSlide>
     </Swiper>
   </section>
@@ -39,6 +39,11 @@ export default {
       subtitle: "Компании, которые доверились нам и остались довольны.",
       slides: ["enegro", "eskinvest", "enegro"],
     };
+  },
+  methods: {
+    getImg(img) {
+      return new URL(`/assets/img/clients/${img}.png`, import.meta.url).href;
+    },
   },
 };
 </script>
