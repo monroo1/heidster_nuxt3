@@ -23,4 +23,6 @@ export default defineNuxtConfig({
     global: true,
     dirs: ["~/components"],
   },
+
+  scrollToTop: true,
 });

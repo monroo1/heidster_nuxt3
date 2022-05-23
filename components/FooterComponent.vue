@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer-wrapper wrapper">
       <div class="footer-social">
-        <router-link to="/">
+        <router-link to="/" @click="scrollToTop">
           <img
             class="footer-social__logo"
             :src="`/assets/img/footer-logo.png`"
@@ -15,6 +15,7 @@
             :key="link.id"
             :href="link.href"
             class="footer-social__link"
+            @click="scrollToTop"
           >
             <img :src="getImg(link)" />
           </a>
@@ -29,7 +30,7 @@
         </h4>
         <ul v-for="li in block.contains" :key="li.id" class="footer__ul">
           <li class="footer__li">
-            <NuxtLink :to="li.link">
+            <NuxtLink :to="li.link" @click="scrollToTop">
               {{ li.text }}
             </NuxtLink>
           </li>
@@ -104,6 +105,9 @@ export default {
   methods: {
     getImg(link) {
       return new URL(`/assets/img/icons/${link.img}.png`, import.meta.url).href;
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
     },
   },
 };

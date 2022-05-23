@@ -2,7 +2,11 @@
   <section class="mobile-nav">
     <div class="mobile-nav__container">
       <div v-for="link in links" :key="link.id" class="mobile-nav__item">
-        <NuxtLink :to="link.route" class="mobile-nav__link">
+        <NuxtLink
+          @click="scrollToTop"
+          :to="link.route"
+          class="mobile-nav__link"
+        >
           <div class="mobile-nav__link-logo">
             <img :src="getImg(link)" alt="img" class="mobile-nav__link-img" />
           </div>
@@ -45,6 +49,10 @@ export default {
   methods: {
     getImg(img) {
       return new URL(`/assets/img/icons/${img.src}.svg`, import.meta.url).href;
+    },
+
+    scrollToTop() {
+      window.scrollTo(0, 0);
     },
   },
 };

@@ -6,6 +6,7 @@
       </NuxtLink>
       <div class="header-nav__navbar">
         <NuxtLink
+          @click="scrollToTop"
           v-for="link in links"
           :key="link.id"
           :to="link.route"
@@ -33,6 +34,11 @@ export default {
       ],
       email: { text: "heidster.studio@gmail.com" },
     };
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>
