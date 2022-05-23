@@ -26,7 +26,7 @@
           id="swiper-projects"
         >
           <SwiperSlide v-for="img in item.swipersImg" :key="img"
-            ><img :src="require(`~/assets/img/${img}.png`)"
+            ><img :src="getImg(img)"
           /></SwiperSlide>
         </Swiper>
         <UIApplicationBtn style="padding: 16px 0" />
@@ -87,6 +87,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    getImg(e) {
+      return `/assets/img/${e.src}.svg`;
+    },
   },
 };
 </script>
