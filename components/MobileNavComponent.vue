@@ -43,8 +43,8 @@ export default {
     };
   },
   methods: {
-    getImg(e) {
-      return `~/assets/img/icons/${e.src}.svg`;
+    getImg(img) {
+      return new URL(`/assets/img/icons/${img.src}.svg`, import.meta.url).href;
     },
   },
 };

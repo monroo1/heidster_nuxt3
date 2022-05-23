@@ -18,7 +18,7 @@
           <div class="feedback__container">
             <div class="feedback__slide">
               <img
-                :src="`/assets/img/${slide.img}.jpg`"
+                :src="getImg(slide)"
                 alt="logo.jpg"
                 class="feedback__slide-logo"
               />
@@ -83,6 +83,11 @@ export default {
         ],
       },
     };
+  },
+  methods: {
+    getImg(link) {
+      return new URL(`/assets/img/${link.img}.jpg`, import.meta.url).href;
+    },
   },
 };
 </script>

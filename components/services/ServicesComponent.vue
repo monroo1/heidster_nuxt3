@@ -8,11 +8,7 @@
     </p>
     <div class="services__container wrapper">
       <div v-for="item in services" :key="item.id" class="services__item">
-        <img
-          class="services__item-logo"
-          :src="`/assets/img/services/${item.img}.png`"
-          alt="img"
-        />
+        <img class="services__item-logo" :src="getImg(item)" alt="img" />
         <div class="services__item-container">
           <h3 class="services__item-title">
             {{ item.title }}
@@ -68,6 +64,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    getImg(link) {
+      return new URL(`/assets/img/services/${link.img}.png`, import.meta.url)
+        .href;
+    },
   },
 };
 </script>

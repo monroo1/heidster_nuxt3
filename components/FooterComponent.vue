@@ -5,7 +5,7 @@
         <router-link to="/">
           <img
             class="footer-social__logo"
-            src="/assets/img/footer-logo.png"
+            :src="`/assets/img/footer-logo.png`"
             alt="Heidster Studio"
           />
         </router-link>
@@ -16,7 +16,7 @@
             :href="link.href"
             class="footer-social__link"
           >
-            <img :src="`/assets/img/icons/${link.img}.png`" />
+            <img :src="getImg(link)" />
           </a>
         </div>
         <p class="footer-copy">
@@ -100,6 +100,11 @@ export default {
         copyright: "© 2021 Heidster Studio",
       },
     };
+  },
+  methods: {
+    getImg(link) {
+      return new URL(`/assets/img/icons/${link.img}.png`, import.meta.url).href;
+    },
   },
 };
 </script>
