@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     getImg(e) {
-      return `/assets/img/icons/${e.src}.svg`;
+      return `~/assets/img/icons/${e.src}.svg`;
     },
   },
 };
