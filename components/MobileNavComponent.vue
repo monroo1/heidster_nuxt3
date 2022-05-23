@@ -5,7 +5,7 @@
         <NuxtLink :to="link.route" class="mobile-nav__link">
           <div class="mobile-nav__link-logo">
             <img
-              :src="`/assets/img/icons/${link.src}.svg`"
+              :src="require(`~/assets/img/icons/${link.src}.svg`)"
               alt="img"
               class="mobile-nav__link-img"
             />

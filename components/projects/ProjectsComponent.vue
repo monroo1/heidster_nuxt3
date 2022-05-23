@@ -26,7 +26,7 @@
           id="swiper-projects"
         >
           <SwiperSlide v-for="img in item.swipersImg" :key="img"
-            ><img :src="`/assets/img/${img}.png`"
+            ><img :src="require(`~/assets/img/${img}.png`)"
           /></SwiperSlide>
         </Swiper>
         <UIApplicationBtn style="padding: 16px 0" />
