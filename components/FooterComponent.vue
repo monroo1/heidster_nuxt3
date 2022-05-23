@@ -5,7 +5,7 @@
         <router-link to="/" @click="scrollToTop">
           <img
             class="footer-social__logo"
-            :src="`/assets/img/footer-logo.png`"
+            src="/assets/img/footer-logo.png"
             alt="Heidster Studio"
           />
         </router-link>
