@@ -34,7 +34,14 @@
         </form>
       </div>
     </section>
-    <section class="contacts-map"></section>
+    <section class="contacts-map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/-/CCU4vDR01B"
+        frameborder="1"
+        width="100%"
+        height="470px"
+      ></iframe>
+    </section>
   </div>
 </template>
 
