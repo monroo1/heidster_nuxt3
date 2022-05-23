@@ -395,6 +395,9 @@ textarea {
 }
 
 @media screen and (max-width: 960px) {
+  .header {
+    display: none;
+  }
   main {
     padding-bottom: 71.19px;
   }
