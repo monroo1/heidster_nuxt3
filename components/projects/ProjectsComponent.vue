@@ -90,7 +90,7 @@ export default {
   },
   methods: {
     getImg(e) {
-      return `/assets/img/${e.src}.svg`;
+      return `/assets/img/${e}.png`;
     },
   },
 };
